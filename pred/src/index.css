@@ -19,6 +19,7 @@
 @layer base {
   body {
     @apply font-sans text-base;
+    background: "#caf0f8";
   }
 }
 
