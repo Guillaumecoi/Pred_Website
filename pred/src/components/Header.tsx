@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
+import { FiMenu } from "react-icons/fi";
+import { RiCloseFill } from "react-icons/ri";
 
 import { predLogo } from "../assets";
 import { navigation } from "../constants";
@@ -29,14 +31,16 @@ const Header = () => {
   };
 
   return (
-    <div className={`fixed top-0 left-0 z-40 w-full backdrop-blur-sm border-b lg:backdrop-blur-s bg-n-3 bg-opacity-20`}>
+    <div className={`fixed top-0 left-0 w-full backdrop-blur-sm border-b lg:backdrop-blur-s bg-n-3 bg-opacity-20`}>
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10">
-        <a className="block w-[12rem] xl:mr-8 py-2" href="#hero">
+        <a className="block w-[12rem] xl:mr-8 py-2" href="#home">
           <img src={predLogo} width={40} alt="PRED" />
         </a>
 
-        <nav className={`${openNavigation ? 'flex' : 'hidden'} fixed top-[5rem] left-0 right-0 bottom-0 lg:static lg:flex lg:mx-auto`}>
-          <div className={`relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row`}>
+        <nav className={`${openNavigation ? 'flex' : 'hidden'} fixed top-[5rem] left-0 right-0 bottom-0 lg:static lg:flex lg:w-full`}>
+          <div className={`relative z-2 flex flex-col items-center lg:flex-row
+            ${openNavigation ? 'mx-auto' : 'ml-auto'}`
+          }>
             {navigation.map((item) => (
               <a
                 key={item.id}
@@ -45,18 +49,16 @@ const Header = () => {
                 className={`block relative font-code text-2xl text-n-6 transition-colors underline underline-offset-4 hover:text-color
                   px-6 py-3 md:py-4 lg:text-base lg:font-semibold 
                   ${ item.url === pathname ? "z-2 lg:text-color-1" : "lg:text-n-6" }
-
                   lg:leading-5 xl:px-12`}
               >
                 {item.title}
               </a>
             ))}
-
           </div>
         </nav>
 
-        <Button className="ml-auto lg:hidden text-n-6" onClick={toggleNavigation}>
-          {openNavigation ? "Close" : "Menu"}
+        <Button className="ml-auto lg:hidden" px="px-3" onClick={toggleNavigation}>
+          {openNavigation ? <RiCloseFill size={24}  color="black" /> : <FiMenu size={24} color="black" />}
         </Button>
       </div>
     </div>
