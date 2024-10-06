@@ -5,7 +5,7 @@ import { FiMenu } from "react-icons/fi";
 import { RiCloseFill } from "react-icons/ri";
 
 import { predLogo } from "../../assets";
-import { navigation } from "../../constants";
+import { navigation } from "../../constants/index";
 import Button from "../Button";
 
 
