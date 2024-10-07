@@ -1,8 +1,8 @@
-import { predLogo } from "../../assets";
+import { logoWhite } from "../../assets/index";
 
 const Logo = () => (
   <a className="block xl:mr-8 py-2" href="#home">
-    <img src={predLogo} width={45} alt="PRED" />
+    <img src={logoWhite} width={45} alt="PRED" />
   </a>
 );
 
