@@ -133,6 +133,15 @@ export default {
         ".tap-highlight-color": {
           "-webkit-tap-highlight-color": "rgba(0, 0, 0, 0)",
         },
+        '.text-shadow': {
+          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.5), 0 -2px 4px rgba(0, 0, 0, 0.5)',
+        },
+        '.text-shadow-md': {
+          textShadow: '3px 3px 6px rgba(0, 0, 0, 0.5), -3px -3px 6px rgba(0, 0, 0, 0.5), 0 3px 6px rgba(0, 0, 0, 0.5), 0 -3px 6px rgba(0, 0, 0, 0.5)',
+        },
+        '.text-shadow-lg': {
+          textShadow: '4px 4px 8px rgba(0, 0, 0, 5), -4px -4px 8px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 5), 0 -4px 8px rgba(0, 0, 0, 0.5)',
+        },
       });
     }),
   ],
