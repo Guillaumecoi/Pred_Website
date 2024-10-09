@@ -18,6 +18,8 @@ export default {
           4: "#7ADB78",
           5: "#858DFF",
           6: "#FF98E2",
+          g1: "#2a4430",
+          g2: "#5d858a",
         },
         stroke: {
           1: "#26242C",
@@ -85,7 +87,7 @@ export default {
       addBase({});
       addComponents({
         ".container": {
-          "@apply max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem]":
+          "@apply max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[100rem]":
             {},
         },
         ".h1": {
@@ -134,7 +136,7 @@ export default {
           "-webkit-tap-highlight-color": "rgba(0, 0, 0, 0)",
         },
         '.text-shadow': {
-          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.5), 0 -2px 4px rgba(0, 0, 0, 0.5)',
+          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
         },
         '.text-shadow-md': {
           textShadow: '3px 3px 6px rgba(0, 0, 0, 0.5), -3px -3px 6px rgba(0, 0, 0, 0.5), 0 3px 6px rgba(0, 0, 0, 0.5), 0 -3px 6px rgba(0, 0, 0, 0.5)',

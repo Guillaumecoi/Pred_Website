@@ -11,8 +11,10 @@ export type NavigationItem = {
 
 export type Hero = {
   title: string;
-  description: string;
+  subtitle: string;
   image: Image;
+  primaryCta: CallToActionItem;
+  secondaryCta: CallToActionItem;
 };
 
 export type CallToActionItem = {

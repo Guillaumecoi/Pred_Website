@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <>
-      <div className={`fixed top-0 left-0 z-40 w-full backdrop-blur-sm border-b bg-black
+      <div className={`fixed top-0 left-0 z-40 w-full backdrop-blur-sm bg-black font-grotesk
         ${openNavigation ? 'bg-opacity-90' : 'bg-opacity-30'}`}>
         <div className="flex items-center px-5 lg:px-7.5">
           <Logo />

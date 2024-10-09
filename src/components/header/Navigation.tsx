@@ -25,7 +25,7 @@ const DesktopNavigation = () => {
 
   return (
     <nav className="lg:flex ml-auto">
-      <div className="relative z-2 flex flex-row mx-auto underline underline-offset-4">
+      <div className="relative z-2 flex flex-row mx-auto">
         {navigation.map((item) => (
           <NavigationItem key={item.id} item={item} pathname={pathname}/>
         ))}
