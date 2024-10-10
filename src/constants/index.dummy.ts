@@ -1,5 +1,6 @@
 import { NavigationItem, Hero, Content, FeatureHighlightSection, HomeContent } from "./types";
-import { mountainLake} from "../assets/private";
+import { mountainLake} from "../assets/dummy";
+import logo from "../assets/dummy/logo/logo.svg";
 
 // Navbar
 const navigation: NavigationItem[] = [
@@ -49,6 +50,10 @@ const hero: Hero = {
 
 const validationContent: FeatureHighlightSection = {
   title: "Dummy Validation Title",
+  image: {
+    url: logo,
+    alt: "highlight",
+  },
   items: [
     {
       id: "0",

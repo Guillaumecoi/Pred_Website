@@ -33,6 +33,7 @@ export interface FeatureItem {
 
 export interface FeatureHighlightSection {
   title: string;
+  image: Image;
   items: FeatureItem[];
   ctas: CallToActionItem[];
 }
