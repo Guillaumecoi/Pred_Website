@@ -1,10 +1,14 @@
-import { hero } from "../constants/index";
+import { Hero as HeroType } from "../constants/types";
 import CallToAction from "./CallToAction";
 
-const Hero = () => {
+interface heroProps {
+  hero: HeroType;
+}
+
+const Hero:  React.FC<heroProps> = ({ hero }) => {
   return (
-    <section className="z-0">
-      <div className="absolute inset-0 w-full h-full z-0">
+    <section className="z-0 h-screen overflow-y-auto">
+      <div className="absolute inset-0 w-full h-full">
         <img src={hero.image.url} alt={hero.image.alt} className="w-full h-full object-cover" />
       </div>
       <div className="absolute inset-0 z-10
