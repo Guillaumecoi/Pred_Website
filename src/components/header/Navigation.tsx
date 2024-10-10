@@ -24,7 +24,7 @@ const DesktopNavigation = () => {
   const pathname = useLocation().pathname;
 
   return (
-    <nav className="lg:flex ml-auto">
+    <nav className={`hidden lg:flex ml-auto`}>
       <div className="relative z-2 flex flex-row mx-auto">
         {navigation.map((item) => (
           <NavigationItem key={item.id} item={item} pathname={pathname}/>

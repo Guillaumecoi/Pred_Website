@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-import useIsMobile from "../../hooks/useIsMobile";
 import Logo from "./Logo";
 import { MobileNavigation, DesktopNavigation } from "./Navigation";
 import MenuToggleButton from "./MenuToggleButtom";
 
 const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false);
-  const isMobile = useIsMobile();
 
   const toggleNavigation = () => {
     if (openNavigation) {
@@ -25,11 +23,11 @@ const Header = () => {
         ${openNavigation ? 'bg-opacity-90' : 'bg-opacity-30'}`}>
         <div className="flex items-center px-5 lg:px-7.5">
           <Logo />
-          {isMobile ? null : (<DesktopNavigation />)}
+          <DesktopNavigation />
           <MenuToggleButton openNavigation={openNavigation} toggleNavigation={toggleNavigation} />
         </div>
       </div>
-      {isMobile ? (<MobileNavigation openNavigation={openNavigation} />) : null}
+      <MobileNavigation openNavigation={openNavigation} />
     </>
   );
 };
