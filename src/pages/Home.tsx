@@ -6,6 +6,10 @@ function Home() {
     <>
       <Header />
       <Hero />
+      <div className="relative container mx-auto">
+        <h1 className="h1 text-center mt-12">Welcome to the Home Page</h1>
+      </div>
+
     </>
   );
 }
