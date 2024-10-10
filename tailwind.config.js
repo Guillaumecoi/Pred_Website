@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import { CgScreenShot } from "react-icons/cg";
 import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
@@ -10,6 +11,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'fullhd': '1800px',
+        '2k': '2400px',
+      },
       colors: {
         color: {
           1: "#AC6AFF",
@@ -18,8 +23,6 @@ export default {
           4: "#7ADB78",
           5: "#858DFF",
           6: "#FF98E2",
-          g1: "#2a4430",
-          g2: "#5d858a",
         },
         stroke: {
           1: "#26242C",
@@ -87,7 +90,7 @@ export default {
       addBase({});
       addComponents({
         ".container": {
-          "@apply max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[100rem]":
+          "@apply max-w-[80rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[90rem]":
             {},
         },
         ".h1": {
