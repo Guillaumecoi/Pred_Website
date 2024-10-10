@@ -1,7 +1,11 @@
-import { hero } from "../constants/index";
+import { Hero as HeroType } from "../constants/types";
 import CallToAction from "./CallToAction";
 
-const Hero = () => {
+interface heroProps {
+  hero: HeroType;
+}
+
+const Hero:  React.FC<heroProps> = ({ hero }) => {
   return (
     <section className="z-0 h-screen overflow-y-auto">
       <div className="absolute inset-0 w-full h-full">
