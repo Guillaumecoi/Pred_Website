@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import { CgScreenShot } from "react-icons/cg";
 import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
@@ -10,6 +11,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'fullhd': '1800px',
+        '2k': '2400px',
+      },
       colors: {
         color: {
           1: "#AC6AFF",
@@ -85,7 +90,7 @@ export default {
       addBase({});
       addComponents({
         ".container": {
-          "@apply max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem]":
+          "@apply max-w-[80rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[90rem]":
             {},
         },
         ".h1": {
@@ -132,6 +137,15 @@ export default {
       addUtilities({
         ".tap-highlight-color": {
           "-webkit-tap-highlight-color": "rgba(0, 0, 0, 0)",
+        },
+        '.text-shadow': {
+          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+        },
+        '.text-shadow-md': {
+          textShadow: '3px 3px 6px rgba(0, 0, 0, 0.5), -3px -3px 6px rgba(0, 0, 0, 0.5), 0 3px 6px rgba(0, 0, 0, 0.5), 0 -3px 6px rgba(0, 0, 0, 0.5)',
+        },
+        '.text-shadow-lg': {
+          textShadow: '4px 4px 8px rgba(0, 0, 0, 5), -4px -4px 8px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 5), 0 -4px 8px rgba(0, 0, 0, 0.5)',
         },
       });
     }),

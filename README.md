@@ -22,7 +22,7 @@ This repository contains the codebase for **Pred's Website**, developed to demon
     For development purposes, duplicate `index.dummy.ts` to `index.content.ts`:
 
     ```sh
-    cp src/contents/index.dummy.ts src/contents/index.content.ts
+    cp src/constants/index.dummy.ts src/constants/index.content.ts
     ```
 
 4. **Run the Project**:
@@ -37,8 +37,9 @@ This repository contains the codebase for **Pred's Website**, developed to demon
 
 The content used on the website is managed separately to ensure privacy:
 
-The content files are in the `src/contents/` folder:
+The content files are in the `src/constants/` folder:
 - **`index.content.ts`**: Contains the real content intended for the live website. It is important that this file remains private and is not committed to a public repository.
+    - Use `src/assets/private` to store any private assets.
 - **`index.dummy.ts`**: Dummy content for development and demonstration.
 
 The .env file controls which content file is used by the application, making it easy to switch between real and dummy content without changing the core codebase.

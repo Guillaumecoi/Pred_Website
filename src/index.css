@@ -19,7 +19,7 @@
 @layer base {
   body {
     @apply font-sans text-base;
-    background: "#caf0f8";
+    background: #ebf8ff; /* Tailwind CSS blue-100 color */
   }
 }
 

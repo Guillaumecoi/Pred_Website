@@ -1,4 +1,5 @@
 import { NavigationItem, Hero, CallToActionItem, Content } from "./types";
+import { mountainLake } from "../assets/dummy/index";
   
 const navigation: NavigationItem[] = [
   {
@@ -25,7 +26,21 @@ const navigation: NavigationItem[] = [
 
 const hero: Hero = {
   title: "Dummy hero title",
-  description: "Dummy subtitle",
+  subtitle: "Dummy subtitle",
+  image: {
+    url: mountainLake,
+    alt: "Hero Image",
+  },
+  primaryCta: {
+    id: "0",
+    title: "Primary CTA",
+    url: "#primary-cta",
+  },
+  secondaryCta: {
+    id: "1",
+    title: "Secondary CTA",
+    url: "#secondary-cta",
+  },
 };
 
 const callToAction: CallToActionItem[] = [
