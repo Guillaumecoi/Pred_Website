@@ -18,13 +18,30 @@ export type Hero = {
 };
 
 export type CallToActionItem = {
-  id: string;
   title: string;
   url: string;
 };
 
+export interface FeatureItem {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  image: Image;
+  cta: CallToActionItem;
+}
+
+export interface FeatureHighlightSection {
+  title: string;
+  items: FeatureItem[];
+  ctas: CallToActionItem[];
+}
+
 export interface Content {
   navigation: NavigationItem[];
+}
+
+export interface HomeContent {
   hero: Hero;
-  callToAction: CallToActionItem[];
+  validationHighlight: FeatureHighlightSection;
 }

@@ -1,8 +1,9 @@
 // index.ts
-import { Content } from './types';
-import { content as realContent } from './index.content';
-import { content as dummyContent } from './index.dummy';
+import { Content, HomeContent } from './types';
+import { content as realContent, homeContent as realHomecontent } from './index.content';
+import { content as dummyContent, homeContent as dummyHomecontent } from './index.dummy';
 
-const content: Content = process.env.USE_REAL_CONTENT === 'true' ? realContent : dummyContent;
+export const content: Content = process.env.USE_REAL_CONTENT === 'true' ? realContent : dummyContent;
+export const homecontent: HomeContent = process.env.USE_REAL_CONTENT === 'true' ? realHomecontent : dummyHomecontent;
 
-export const { navigation, hero, callToAction } = content;
+export const { navigation } = content;
