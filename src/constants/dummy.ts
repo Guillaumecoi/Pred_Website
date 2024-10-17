@@ -1,7 +1,6 @@
 import { NavigationItem, Hero, Content, FeatureHighlightSection, HomeContent, Image } from "./types";
-import mountainLake from "../assets/backgrounds/mountain-lake.jpg";
-import whitelogo from "../assets/dummy/logo/logo-white.svg";
-import logo from "../assets/dummy/logo/logo.svg";
+import { mountainLake, officeTeam } from "../assets/backgrounds";
+import { logo, logoWhite } from "../assets/dummy/logo";
 
 // Navbar
 const navigation: NavigationItem[] = [
@@ -28,8 +27,8 @@ const navigation: NavigationItem[] = [
 ];
 
 const navbarlogo: Image = {
-  url: whitelogo,
-  alt: "logo",
+  url: logoWhite,
+  alt: "navbar logo",
 };
 
 export const content: Content = {
@@ -124,19 +123,19 @@ export const homeContent: HomeContent = {
 
 // Our Team
 const heroTeam: Hero = {
-  title: "Meet the Team Behind PRED",
-  subtitle: "A Team of Experts in Healthcare Innovation",
+  title: "Meet Our Team",
+  subtitle: "",
   image: {
-    url: mountainLake,
-    alt: "hero",
+    url: officeTeam,
+    alt: "hero office",
   },
   primaryCta: {
-    title: "Join Our Team",
-    url: "#join-us",
+    title: "",
+    url: "",
   },
   secondaryCta: {
-    title: "Contact Us",
-    url: "#contact-us",
+    title: "",
+    url: "",
   },
 };
 

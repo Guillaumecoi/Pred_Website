@@ -17,12 +17,12 @@ This repository contains the codebase for **Pred's Website**, developed to demon
     npm install
     ```
 
-3. **Create index.content.ts**:
+3. **Create content.ts**:
 
-    For development purposes, duplicate `index.dummy.ts` to `index.content.ts`:
+    For development purposes (see [using the template](#using-the-template) why), duplicate `dummy.ts` to `content.ts`:
 
     ```sh
-    cp src/constants/index.dummy.ts src/constants/index.content.ts
+    cp src/constants/dummy.ts src/constants/content.ts
     ```
 
 4. **Run the Project**:
@@ -38,11 +38,11 @@ This repository contains the codebase for **Pred's Website**, developed to demon
 The content used on the website is managed separately to ensure privacy:
 
 The content files are in the `src/constants/` folder:
-- **`index.content.ts`**: Contains the real content intended for the live website. It is important that this file remains private and is not committed to a public repository.
+- **`content.ts`**: Contains the real content intended for the live website. It is important that this file remains private and is not committed to a public repository.
     - Use `src/assets/private` to store any private assets.
-- **`index.dummy.ts`**: Dummy content for development and demonstration.
+- **`dummy.ts`**: Dummy content for development and demonstration.
 
-The .env file controls which content file is used by the application, making it easy to switch between real and dummy content without changing the core codebase.
+The `.env` file controls which content file is used by the application, making it easy to switch between real and dummy content without changing the core codebase.
 
 ```env
 USE_REAL_CONTENT=false  # Set to 'true' for real content
