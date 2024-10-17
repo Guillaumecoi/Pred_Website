@@ -26,6 +26,7 @@ export type NavigationItem = {
 
 export interface Content {
   navigation: NavigationItem[];
+  logo: Image;
 }
 
 // Home content
@@ -68,5 +69,6 @@ export interface Partner {
 }
 
 export interface TeamContent {
+  hero: Hero;
   members: TeamMember[];
 }
