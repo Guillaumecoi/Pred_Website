@@ -59,6 +59,7 @@ export interface TeamMember {
   image: Image;
   description: string;
   email: string;
+  profileUrl: string;
 }
 
 export interface Partner {

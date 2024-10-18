@@ -150,7 +150,8 @@ const teamMembers = [
       alt: "Alice Johnson",
     },
     description: "Alice Johnson is a skilled software engineer with a passion for developing innovative solutions. She has a strong background in full-stack development.",
-    email: "alice.johnson@example.com"
+    email: "alice.johnson@example.com",
+    profileUrl: "/our-team/0",
   },
   {
     id: "1",
@@ -161,7 +162,8 @@ const teamMembers = [
       alt: "Bob Smith",
     },
     description: "Bob Smith is an experienced product manager who excels at leading cross-functional teams to deliver high-quality products on time.",
-    email: "bob.smith@example.com"
+    email: "bob.smith@example.com",
+    profileUrl: "/our-team/1",
   },
   {
     id: "2",
@@ -172,7 +174,8 @@ const teamMembers = [
       alt: "Charlie Brown",
     },
     description: "Charlie Brown is a creative UX designer with a keen eye for detail. He is dedicated to creating user-friendly interfaces and enhancing user experiences.",
-    email: "charlie.brown@example.com"
+    email: "charlie.brown@example.com",
+    profileUrl: "/our-team/2",
   },
 ];
 
