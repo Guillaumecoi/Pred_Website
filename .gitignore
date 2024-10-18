@@ -24,7 +24,7 @@ dist-ssr
 *.sw?
 
 # So that the content of the website is not exposed
-src/constants/index.content.ts
+src/constants/content.ts
 src/assets/private
 
 # Environment variables

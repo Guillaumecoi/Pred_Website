@@ -90,7 +90,7 @@ export default {
       addBase({});
       addComponents({
         ".container": {
-          "@apply max-w-[80rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[90rem]":
+          "@apply max-w-[80rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[90rem] font-grotesk":
             {},
         },
         ".h1": {

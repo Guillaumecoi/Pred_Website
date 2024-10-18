@@ -1,8 +1,8 @@
-import { logoWhite } from "../../assets/index";
+import { navbarlogo } from "../../constants";
 
 const Logo = () => (
   <a className="block xl:mr-8 py-2" href="#home">
-    <img src={logoWhite} width={45} alt="PRED" />
+    <img src={navbarlogo.url} width={45} alt={navbarlogo.alt} />
   </a>
 );
 

@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { navigation } from "../../constants/index";
+import { navigation } from "../../constants";
 import NavigationItem from "./NavigationItem";
 
 interface MobileNavigationProps {

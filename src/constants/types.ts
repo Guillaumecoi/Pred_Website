@@ -1,10 +1,10 @@
+// General types
 export type Image = {
   url: string;
   alt: string;
 };
 
-export type NavigationItem = {
-  id: string;
+export type CallToActionItem = {
   title: string;
   url: string;
 };
@@ -17,11 +17,19 @@ export type Hero = {
   secondaryCta: CallToActionItem;
 };
 
-export type CallToActionItem = {
+// Main types
+export type NavigationItem = {
+  id: string;
   title: string;
   url: string;
 };
 
+export interface Content {
+  navigation: NavigationItem[];
+  logo: Image;
+}
+
+// Home content
 export interface FeatureItem {
   id: string;
   title: string;
@@ -38,11 +46,30 @@ export interface FeatureHighlightSection {
   ctas: CallToActionItem[];
 }
 
-export interface Content {
-  navigation: NavigationItem[];
-}
-
 export interface HomeContent {
   hero: Hero;
   validationHighlight: FeatureHighlightSection;
+}
+
+// Team content
+export interface TeamMember {
+  id: string;
+  name: string;
+  role: string;
+  image: Image;
+  description: string;
+  email: string;
+  profileUrl: string;
+}
+
+export interface Partner {
+  id: string;
+  name: string;
+  logo: Image;
+  url: string;
+}
+
+export interface TeamContent {
+  hero: Hero;
+  members: TeamMember[];
 }
