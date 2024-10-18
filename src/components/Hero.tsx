@@ -8,7 +8,7 @@ interface heroProps {
 
 const Hero: React.FC<heroProps> = ({ hero, small }) => {
   return (
-    <section className={`z-0 ${small ? 'h-96' : 'h-screen'} overflow-y-auto`}>
+    <section className={`z-0 ${small ? 'h-96' : 'h-screen'} overflow-y-auto shadow-md `}>
       <div className={`absolute inset-0 w-full ${small ? 'h-96' : 'h-full'}`}>
         <img src={hero.image.url} alt={hero.image.alt} className="w-full h-full object-cover" />
       </div>
