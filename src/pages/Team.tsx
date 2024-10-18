@@ -1,5 +1,6 @@
 import Header from "../components/header/Header";
 import Hero from "../components/Hero";
+import TeamMember from "../components/TeamMember";
 import { teamContent } from "../constants";
 
 function Team() {
@@ -7,8 +8,11 @@ function Team() {
     <>
       <Header />
       <Hero hero={teamContent.hero} small={true} />
-      <h2>Team</h2>
-
+      <div className="container py-20 flex justify-center">
+        {teamContent.members.map((member) => (
+          <TeamMember key={member.id} teammember={member} />
+        ))}
+      </div>
     </>
   );
 }
