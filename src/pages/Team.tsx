@@ -8,7 +8,7 @@ function Team() {
     <>
       <Header />
       <Hero hero={teamContent.hero} small={true} />
-      <div className="container py-20 flex justify-center">
+      <div className="container py-20 space-y-12 lg:space-y-0 lg:flex">
         {teamContent.members.map((member) => (
           <TeamMember key={member.id} teammember={member} />
         ))}
