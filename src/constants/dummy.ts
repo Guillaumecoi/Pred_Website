@@ -1,13 +1,14 @@
 import { NavigationItem, Hero, Content, FeatureHighlightSection, HomeContent, Image } from "./types";
 import { mountainLake, officeTeam } from "../assets/backgrounds";
 import { logo, logoWhite } from "../assets/dummy/logo";
+import { AliceJohnson, BobSmith, CharlieBrown } from "../assets/dummy/team";
 
 // Navbar
 const navigation: NavigationItem[] = [
   {
     id: "0",
     title: "Home",
-    url: "#home",
+    url: "/",
   },
   {
     id: "1",
@@ -17,7 +18,7 @@ const navigation: NavigationItem[] = [
   {
     id: "2",
     title: "About Us",
-    url: "#our-team",
+    url: "/our-team",
   },
   {
     id: "3",
@@ -38,19 +39,19 @@ export const content: Content = {
 
 // Homescreen
 const hero: Hero = {
-  title: "Dummy Title",
-  subtitle: "Dummy Subtitle",
+  title: "Homescreen Title",
+  subtitle: "Homescreen Subtitle",
   image: {
     url: mountainLake,
-    alt: "dummyAltText",
+    alt: "hero home",
   },
   primaryCta: {
-    title: "Dummy Primary CTA",
-    url: "#dummy-primary-cta",
+    title: "Primary CTA",
+    url: "#primary-cta",
   },
   secondaryCta: {
-    title: "Dummy Secondary CTA",
-    url: "#dummy-secondary-cta",
+    title: "Secondary CTA",
+    url: "#secondary-cta",
   },
 };
 
@@ -127,7 +128,7 @@ const heroTeam: Hero = {
   subtitle: "",
   image: {
     url: officeTeam,
-    alt: "hero office",
+    alt: "hero team",
   },
   primaryCta: {
     title: "",
@@ -142,36 +143,36 @@ const heroTeam: Hero = {
 const teamMembers = [
   {
     id: "0",
-    name: "John Doe",
-    role: "Inventor Pred",
+    name: "Alice Johnson",
+    role: "Software Engineer",
     image: {
-      url: logo,
-      alt: "John Doe",
+      url: AliceJohnson,
+      alt: "Alice Johnson",
     },
-    description: "John Doe is a visionary entrepreneur with a passion for healthcare innovation. He founded Pred to bring the benefits of laser therapy to patients worldwide.",
-    email: "john.doe@example.com"
+    description: "Alice Johnson is a skilled software engineer with a passion for developing innovative solutions. She has a strong background in full-stack development.",
+    email: "alice.johnson@example.com"
   },
   {
     id: "1",
-    name: "Jane Smith",
-    role: "Chief Technology Officer",
+    name: "Bob Smith",
+    role: "Product Manager",
     image: {
-      url: logo,
-      alt: "Jane Smith",
+      url: BobSmith,
+      alt: "Bob Smith",
     },
-    description: "Jane Smith is a leading expert in respiratory health. She has been instrumental in developing Pred's breakthrough laser therapy for lung treatment.",
-    email: "jane.smith@example.com"
+    description: "Bob Smith is an experienced product manager who excels at leading cross-functional teams to deliver high-quality products on time.",
+    email: "bob.smith@example.com"
   },
   {
     id: "2",
-    name: "Michael Johnson",
-    role: "Chief Executive Officer",
+    name: "Charlie Brown",
+    role: "UX Designer",
     image: {
-      url: logo,
-      alt: "Michael Johnson",
+      url: CharlieBrown,
+      alt: "Charlie Brown",
     },
-    description: "Michael Johnson is a renowned scientist with a background in laser technology. He leads Pred's research efforts in developing new applications for laser therapy.",
-    email: "michael.johnson@example.com"
+    description: "Charlie Brown is a creative UX designer with a keen eye for detail. He is dedicated to creating user-friendly interfaces and enhancing user experiences.",
+    email: "charlie.brown@example.com"
   },
 ];
 
