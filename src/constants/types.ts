@@ -58,6 +58,8 @@ export interface PromotionalVideo {
   alt: string;
   title: string;
   checks: string[];
+  primaryCta: CallToActionItem;
+  secondaryCta: CallToActionItem;
 }
 
 export interface HomeContent {

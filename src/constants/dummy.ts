@@ -166,6 +166,14 @@ const promotionalVideo = {
     "Lost? That’s part of the fun!",
     "More memorable than manageable!",
   ],
+  primaryCta: {
+    title: "Discover the magic",
+    url: "#learn-more",
+  },
+  secondaryCta: {
+    title: "",
+    url: "",
+  },
 };
 
 export const homeContent: HomeContent = {
