@@ -1,7 +1,14 @@
+/**
+ * This is dummy content for the website. It is used to populate the website with placeholder content.
+ * This content is used to demonstrate the layout and functionality of the website.
+ * Replace this content with actual content when integrating the website.
+ */
+
 import { NavigationItem, Hero, Content, FeatureHighlightSection, HomeContent, Image } from "./types";
 import { mountainLake, officeTeam } from "../assets/backgrounds";
-import { logo, logoWhite } from "../assets/dummy/logo";
+import { logo, logoWhite, google, apple, microsoft } from "../assets/dummy/logo";
 import { AliceJohnson, BobSmith, CharlieBrown } from "../assets/dummy/team";
+import { Video } from "../assets/dummy/video";
 
 // Navbar
 const navigation: NavigationItem[] = [
@@ -12,7 +19,7 @@ const navigation: NavigationItem[] = [
   },
   {
     id: "1",
-    title: "About Pred",
+    title: "Our Company",
     url: "#our-company",
   },
   {
@@ -117,9 +124,55 @@ const validationContent: FeatureHighlightSection = {
   ],
 };
 
+const socialProof = [
+  {
+    id: "0",
+    image: {
+      url: google,
+      alt: "Google logo",
+    },
+    name: "Google",
+    quote: "Our collaboration with Google ensures that our website is always last—because they save the best for last, right?",
+    url: "https://www.google.com/",
+  },
+  {
+    id: "1",
+    image: {
+      url: microsoft,
+      alt: "Microsoft logo",
+    },
+    name: "Microsoft",
+    quote: "We earned a certificate from Microsoft for ‘Innovative Error Generation.’",
+    url: "https://www.microsoft.com/",
+  },
+  {
+    id: "2",
+    image: {
+      url: apple,
+      alt: "Apple logo",
+    },
+    name: "Apple",
+    quote: "Apple declared us ‘revolutionary’, in causing people to go back to pen and paper.",
+    url: "https://www.apple.com/",
+  },
+];
+
+const promotionalVideo = {
+  url: Video,
+  alt: "Promotional video",
+  title: "Promotional Video",
+  checks: [
+    "Created by experts tired of effortless solutions",
+    "Lost? That’s part of the fun!",
+    "More memorable than manageable!",
+  ],
+};
+
 export const homeContent: HomeContent = {
   hero: hero,
   validationHighlight: validationContent,
+  socialProof: socialProof,
+  promotionalVideo: promotionalVideo,
 };
 
 // Our Team

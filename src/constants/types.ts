@@ -46,9 +46,25 @@ export interface FeatureHighlightSection {
   ctas: CallToActionItem[];
 }
 
+export interface SocialProof {
+  id: string;
+  image: Image;
+  name: string;
+  quote: string;
+  url: string;
+}
+export interface PromotionalVideo {
+  url: string;
+  alt: string;
+  title: string;
+  checks: string[];
+}
+
 export interface HomeContent {
   hero: Hero;
   validationHighlight: FeatureHighlightSection;
+  socialProof: SocialProof[];
+  promotionalVideo: PromotionalVideo;
 }
 
 // Team content
