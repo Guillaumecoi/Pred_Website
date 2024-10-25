@@ -24,9 +24,16 @@ export type NavigationItem = {
   url: string;
 };
 
+export type FooterContent = {
+  company: string;
+  designer: string;
+  email: string;
+};
+
 export interface Content {
   navigation: NavigationItem[];
   logo: Image;
+  footer: FooterContent;
 }
 
 // Home content

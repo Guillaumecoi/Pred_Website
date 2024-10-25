@@ -39,9 +39,16 @@ const navbarlogo: Image = {
   alt: "navbar logo",
 };
 
+const footerContent = {
+  company: "Pred",
+  designer: "Guillaume Coigniez",
+  email: "",
+};
+
 export const content: Content = {
   navigation: navigation,
   logo: navbarlogo,
+  footer: footerContent,
 };
 
 // Homescreen
