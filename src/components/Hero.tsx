@@ -15,7 +15,7 @@ const Hero: React.FC<heroProps> = ({ hero, small }) => {
       <div className={`absolute inset-0 z-10 ${small ? 'h-96' : 'h-full'} bg-gradient-to-r from-black/90 to-black/30 lg:to-white/20`}></div>
       <div className={`
         relative z-20 
-        flex justify-start items-center flex-col lg:flex-row ${small ? 'h-96' : 'h-full'}
+        flex items-center lg:flex-row ${small ? 'h-96' : 'h-full'}
         px-4 ${small ? 'py-30' : 'py-72'} lg:px-40 ${small ? 'lg:pt-30' : 'lg:pt-60'}
         text-gray-200 text-left font-bold font-serif
       `}>

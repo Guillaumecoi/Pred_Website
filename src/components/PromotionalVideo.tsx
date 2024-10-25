@@ -27,20 +27,21 @@ const PromotionalVideo: React.FC<PromotionalVideoProps> = ({ promotionalVideoPay
       threshold: 0.5, // Adjust this value based on when you want the video to autoplay
     });
 
-    if (videoRef.current) {
-      observer.observe(videoRef.current);
+    const currentVideoRef = videoRef.current;
+    if (currentVideoRef) {
+      observer.observe(currentVideoRef);
     }
 
     return () => {
-      if (videoRef.current) {
-        observer.unobserve(videoRef.current);
+      if (currentVideoRef) {
+        observer.unobserve(currentVideoRef);
       }
     };
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center lg:space-x-20 md:flex-row py-12 px-8 lg:px-14 text-gray-800" id='promo-video'>
-      <div className="w-full md:w-1/3 mb-12 md:mb-0 space-y-8">
+    <div className="flex flex-col items-center justify-center lg:space-x-20 lg:flex-row py-12 px-8 lg:px-14 text-gray-800" id='promo-video'>
+      <div className="w-full lg:w-1/3 mb-12 lg:mb-0 space-y-8">
         <h2 className="h2 mb-4">{pv.title}</h2>
         <p className="text-xl text-justify pb-12">
           {pv.checks.map((check, index) => (
