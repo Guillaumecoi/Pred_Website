@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { FaCheck } from "react-icons/fa";
 import { PromotionalVideo as PV } from '../constants/types';
-import CallToAction from './CallToAction';
+import CallToAction from './general/CallToAction';
 
 interface PromotionalVideoProps {
   promotionalVideoPayload: PV;
@@ -40,7 +40,7 @@ const PromotionalVideo: React.FC<PromotionalVideoProps> = ({ promotionalVideoPay
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center lg:space-x-20 lg:flex-row py-12 px-8 lg:px-14 text-gray-800" id='promo-video'>
+    <div className="flex flex-col items-center justify-center lg:space-x-20 lg:flex-row py-20 px-8 lg:px-14 text-gray-800" id='promo-video'>
       <div className="w-full lg:w-1/3 mb-12 lg:mb-0 space-y-8">
         <h2 className="h2 mb-4">{pv.title}</h2>
         <p className="text-xl text-justify pb-12">

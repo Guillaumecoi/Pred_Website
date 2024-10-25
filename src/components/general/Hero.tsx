@@ -1,4 +1,4 @@
-import { Hero as HeroType } from "../constants/types";
+import { Hero as HeroType } from "../../constants/types";
 import CallToAction from "./CallToAction";
 
 interface heroProps {

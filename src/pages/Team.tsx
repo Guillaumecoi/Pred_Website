@@ -1,5 +1,5 @@
 import Header from "../components/header/Header";
-import Hero from "../components/Hero";
+import Hero from "../components/general/Hero";
 import TeamMember from "../components/TeamMember";
 import { teamContent } from "../constants";
 
