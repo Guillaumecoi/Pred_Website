@@ -2,6 +2,7 @@ import Header from "../components/header/Header";
 import Hero from "../components/general/Hero";
 import PromotionalVideo from "../components/PromotionalVideo";
 import SocialProof from "../components/SocialProof";
+import Footer from "../components/Footer";
 import { homecontent } from "../constants";
 
 function Home() {
@@ -14,6 +15,7 @@ function Home() {
         <SocialProof content={homecontent.socialProof} title="Partner Organisations" />
       </div>
 
+      <Footer />
     </>
   );
 }

@@ -2,6 +2,7 @@ import Header from "../components/header/Header";
 import Hero from "../components/general/Hero";
 import TeamMember from "../components/TeamMember";
 import { teamContent } from "../constants";
+import Footer from "../components/Footer";
 
 function Team() {
   return (
@@ -13,6 +14,7 @@ function Team() {
           <TeamMember key={member.id} teammember={member} />
         ))}
       </div>
+      <Footer />
     </>
   );
 }
