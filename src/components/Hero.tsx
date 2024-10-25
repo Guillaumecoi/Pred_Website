@@ -27,14 +27,14 @@ const Hero: React.FC<heroProps> = ({ hero, small }) => {
               <CallToAction 
                 url={hero.primaryCta.url} 
                 title={hero.primaryCta.title} 
-                className="bg-gradient-to-r from-blue-900/80 to-blue-700/50 lg:to-blue-600/40 p-3"
+                className="bg-gradient-to-br from-blue-900/80 to-blue-700/50 lg:to-blue-600/35"
               />
             )}
             {hero.secondaryCta.title && (
               <CallToAction
                 url={hero.secondaryCta.url} 
                 title={hero.secondaryCta.title}
-                className="bg-gradient-to-r from-gray-950/90 to-black/70 lg:to-black/50 p-3"
+                className="bg-gradient-to-br from-gray-950/90 to-black/70 lg:to-black/40"
               />
             )}
           </div>
