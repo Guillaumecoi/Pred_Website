@@ -3,28 +3,27 @@ import CallToAction from "./CallToAction";
 
 interface heroProps {
   hero: HeroType;
-  small?: boolean;
 }
 
-const Hero: React.FC<heroProps> = ({ hero, small }) => {
+const Hero: React.FC<heroProps> = ({ hero }) => {
   return (
-    <section className={`z-0 ${small ? 'h-96' : 'h-screen'} overflow-y-auto shadow-md `}>
-      <div className={`absolute inset-0 w-full ${small ? 'h-96' : 'h-full'}`}>
+    <section className={`z-0 ${hero.small ? 'h-96' : 'h-screen'} overflow-y-auto shadow-md `}>
+      <div className={`absolute inset-0 w-full ${hero.small ? 'h-96' : 'h-full'}`}>
         <img src={hero.image.url} alt={hero.image.alt} className="w-full h-full object-cover" />
       </div>
-      <div className={`absolute inset-0 z-10 ${small ? 'h-96' : 'h-full'} bg-gradient-to-r from-black/90 to-black/30 lg:to-white/20`}></div>
+      <div className={`absolute inset-0 z-10 ${hero.small ? 'h-96' : 'h-full'} bg-gradient-to-r from-black/90 to-black/30 lg:to-white/20`}></div>
       <div className={`
         relative z-20 
-        flex items-center lg:flex-row ${small ? 'h-96' : 'h-full'}
-        px-4 ${small ? 'py-30' : 'py-72'} lg:px-40 ${small ? 'lg:pt-30' : 'lg:pt-60'}
+        flex items-center lg:flex-row ${hero.small ? 'h-96' : 'h-full'}
+        px-4 ${hero.small ? 'py-30' : 'py-72'} lg:px-40 ${hero.small ? 'lg:pt-30' : 'lg:pt-60'}
         text-gray-200 text-left font-bold font-serif
       `}>
         <div className="w-full lg:w-1/2 lg:-ml-10 2k:w-2/5">
-          <h1 className={`h1  text-shadow ${small ? 'text-4xl mb-4' : 'mb-8'}`}>{hero.title}</h1>
+          <h1 className={`h1  text-shadow ${hero.small ? 'text-4xl mb-4' : 'mb-8'}`}>{hero.title}</h1>
           {hero.subtitle && 
-            <h4 className={`h4  text-shadow ${small ? 'text-2xl mb-2' : 'mb-6'}`}>{hero.subtitle}</h4>
+            <h4 className={`h4  text-shadow ${hero.small ? 'text-2xl mb-2' : 'mb-6'}`}>{hero.subtitle}</h4>
           }
-          <div className={`flex space-x-6 lg:space-x-12 ${small ? 'mb-10' : 'mb-40'} shadow-sm lg:text-xl text-white font-semibold`}>
+          <div className={`flex space-x-6 lg:space-x-12 ${hero.small ? 'mb-10' : 'mb-40'} shadow-sm lg:text-xl text-white font-semibold`}>
             {hero.primaryCta && (
               <CallToAction 
                 url={hero.primaryCta.url} 

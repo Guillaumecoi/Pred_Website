@@ -51,6 +51,7 @@ export const content: Content = {
 
 // Homescreen
 const hero: Hero = {
+  small: false,
   title: "Homescreen Title",
   subtitle: "Homescreen Subtitle",
   image: {
@@ -123,6 +124,7 @@ export const homeContent: HomeContent = {
 
 // Our Team
 const heroTeam: Hero = {
+  small: true,
   title: "Meet Our Team",
   image: {
     url: officeTeam,

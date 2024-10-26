@@ -10,6 +10,7 @@ export type CallToActionItem = {
 };
 
 export type Hero = {
+  small: boolean;
   title: string;
   subtitle?: string;
   image: Image;
