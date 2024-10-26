@@ -52,10 +52,10 @@ const PromotionalVideo: React.FC<PromotionalVideoProps> = ({ promotionalVideoPay
           ))}
         </p>
         <div className="flex flex-col space-y-6 h5 text-gray-50">
-          { pv.primaryCta.title &&
+          { pv.primaryCta &&
             <CallToAction title={pv.primaryCta.title} url={pv.primaryCta.title} className='bg-gradient-to-br from-green-700 to-green-500 w-80'/>
           }
-          { pv.secondaryCta.title &&
+          { pv.secondaryCta &&
             <CallToAction title={pv.secondaryCta.title} url={pv.secondaryCta.title} className='bg-gradient-to-r from-n-8 to-n-6 w-80'/>
           }
         </div>
@@ -63,7 +63,7 @@ const PromotionalVideo: React.FC<PromotionalVideoProps> = ({ promotionalVideoPay
       <div className="w-full lg:w-3/5">
         <video ref={videoRef} controls
           width="100%" className="rounded-lg shadow-xl shadow-black/50 transition-transform transform hover:scale-105">
-          <source src={pv.url} type="video/mp4" />
+          <source src={pv.videoUrl} type="video/mp4" />
           {pv.alt}
         </video>
       </div>

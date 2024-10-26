@@ -4,9 +4,9 @@
  * Replace this content with actual content when integrating the website.
  */
 
-import { NavigationItem, Hero, Content, FeatureHighlightSection, HomeContent, Image } from "./types";
+import { NavigationItem, Hero, Content, HomeContent, Image } from "./types";
 import { mountainLake, officeTeam } from "../assets/backgrounds";
-import { logo, logoWhite, google, apple, microsoft } from "../assets/dummy/logo";
+import { logoWhite, google, apple, microsoft } from "../assets/dummy/logo";
 import { AliceJohnson, BobSmith, CharlieBrown } from "../assets/dummy/team";
 import { Video } from "../assets/dummy/video";
 
@@ -40,9 +40,7 @@ const navbarlogo: Image = {
 };
 
 const footerContent = {
-  company: "Pred",
-  designer: "Guillaume Coigniez",
-  email: "",
+  company: "Guillaume Coigniez",
 };
 
 export const content: Content = {
@@ -67,68 +65,6 @@ const hero: Hero = {
     title: "Secondary CTA",
     url: "#secondary-cta",
   },
-};
-
-const validationContent: FeatureHighlightSection = {
-  title: "Dummy Validation Title",
-  image: {
-    url: logo,
-    alt: "highlight",
-  },
-  items: [
-    {
-      id: "0",
-      title: "Dummy Item Title 1",
-      subtitle: "Dummy Item Subtitle 1",
-      description: "Dummy description 1.",
-      image: {
-        url: "dummyImageURL1",
-        alt: "dummyAltText1",
-      },
-      cta: {
-        title: "Dummy CTA 1",
-        url: "#dummy-cta-1",
-      },
-    },
-    {
-      id: "1",
-      title: "Dummy Item Title 2",
-      subtitle: "Dummy Item Subtitle 2",
-      description: "Dummy description 2.",
-      image: {
-        url: "dummyImageURL2",
-        alt: "dummyAltText2",
-      },
-      cta: {
-        title: "Dummy CTA 2",
-        url: "#dummy-cta-2",
-      },
-    },
-    {
-      id: "2",
-      title: "Dummy Item Title 3",
-      subtitle: "Dummy Item Subtitle 3",
-      description: "Dummy description 3.",
-      image: {
-        url: "dummyImageURL3",
-        alt: "dummyAltText3",
-      },
-      cta: {
-        title: "Dummy CTA 3",
-        url: "#dummy-cta-3",
-      },
-    }
-  ],
-  ctas: [
-    {
-      title: "Dummy Learn More",
-      url: "#dummy-learn-more",
-    },
-    {
-      title: "Dummy Contact Us",
-      url: "#dummy-contact-us",
-    },
-  ],
 };
 
 const socialProof = [
@@ -165,7 +101,7 @@ const socialProof = [
 ];
 
 const promotionalVideo = {
-  url: Video,
+  videoUrl: Video,
   alt: "Promotional video",
   title: "Promotional Video",
   checks: [
@@ -177,15 +113,10 @@ const promotionalVideo = {
     title: "Discover the magic",
     url: "#learn-more",
   },
-  secondaryCta: {
-    title: "",
-    url: "",
-  },
 };
 
 export const homeContent: HomeContent = {
   hero: hero,
-  validationHighlight: validationContent,
   socialProof: socialProof,
   promotionalVideo: promotionalVideo,
 };
@@ -193,18 +124,9 @@ export const homeContent: HomeContent = {
 // Our Team
 const heroTeam: Hero = {
   title: "Meet Our Team",
-  subtitle: "",
   image: {
     url: officeTeam,
     alt: "hero team",
-  },
-  primaryCta: {
-    title: "",
-    url: "",
-  },
-  secondaryCta: {
-    title: "",
-    url: "",
   },
 };
 

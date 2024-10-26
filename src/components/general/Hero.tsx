@@ -21,16 +21,18 @@ const Hero: React.FC<heroProps> = ({ hero, small }) => {
       `}>
         <div className="w-full lg:w-1/2 lg:-ml-10 2k:w-2/5">
           <h1 className={`h1  text-shadow ${small ? 'text-4xl mb-4' : 'mb-8'}`}>{hero.title}</h1>
-          <h4 className={`h4  text-shadow ${small ? 'text-2xl mb-2' : 'mb-6'}`}>{hero.subtitle}</h4>
+          {hero.subtitle && 
+            <h4 className={`h4  text-shadow ${small ? 'text-2xl mb-2' : 'mb-6'}`}>{hero.subtitle}</h4>
+          }
           <div className={`flex space-x-6 lg:space-x-12 ${small ? 'mb-10' : 'mb-40'} shadow-sm lg:text-xl text-white font-semibold`}>
-            {hero.primaryCta.title && (
+            {hero.primaryCta && (
               <CallToAction 
                 url={hero.primaryCta.url} 
                 title={hero.primaryCta.title} 
                 className="bg-gradient-to-br from-blue-900/80 to-blue-700/50 lg:to-blue-600/35"
               />
             )}
-            {hero.secondaryCta.title && (
+            {hero.secondaryCta && (
               <CallToAction
                 url={hero.secondaryCta.url} 
                 title={hero.secondaryCta.title}

@@ -11,13 +11,13 @@ export type CallToActionItem = {
 
 export type Hero = {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   image: Image;
-  primaryCta: CallToActionItem;
-  secondaryCta: CallToActionItem;
+  primaryCta?: CallToActionItem;
+  secondaryCta?: CallToActionItem;
 };
 
-// Main types
+// Main content types
 export type NavigationItem = {
   id: string;
   title: string;
@@ -26,8 +26,8 @@ export type NavigationItem = {
 
 export type FooterContent = {
   company: string;
-  designer: string;
-  email: string;
+  designer?: string;
+  email?: string;
 };
 
 export interface Content {
@@ -37,22 +37,6 @@ export interface Content {
 }
 
 // Home content
-export interface FeatureItem {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  image: Image;
-  cta: CallToActionItem;
-}
-
-export interface FeatureHighlightSection {
-  title: string;
-  image: Image;
-  items: FeatureItem[];
-  ctas: CallToActionItem[];
-}
-
 export interface SocialProof {
   id: string;
   image: Image;
@@ -61,17 +45,16 @@ export interface SocialProof {
   url: string;
 }
 export interface PromotionalVideo {
-  url: string;
+  videoUrl: string;
   alt: string;
   title: string;
   checks: string[];
-  primaryCta: CallToActionItem;
-  secondaryCta: CallToActionItem;
+  primaryCta?: CallToActionItem;
+  secondaryCta?: CallToActionItem;
 }
 
 export interface HomeContent {
   hero: Hero;
-  validationHighlight: FeatureHighlightSection;
   socialProof: SocialProof[];
   promotionalVideo: PromotionalVideo;
 }
@@ -85,13 +68,6 @@ export interface TeamMember {
   description: string;
   email: string;
   profileUrl: string;
-}
-
-export interface Partner {
-  id: string;
-  name: string;
-  logo: Image;
-  url: string;
 }
 
 export interface TeamContent {
