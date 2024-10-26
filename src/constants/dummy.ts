@@ -4,9 +4,9 @@
  * Replace this content with actual content when integrating the website.
  */
 
-import { NavigationItem, Hero, Content, HomeContent, Image } from "./types";
+import { NavigationItem, Hero, Content, HomeContent, Image, PictureTransformation } from "./types";
 import { hospital, mountainLake, officeTeam } from "../assets/backgrounds";
-import { logoWhite, google, apple, microsoft } from "../assets/dummy/logo";
+import { logoWhite, google, apple, microsoft, logoBlack } from "../assets/dummy/logo";
 import { AliceJohnson, BobSmith, CharlieBrown } from "../assets/dummy/team";
 import { Video } from "../assets/dummy/video";
 
@@ -186,6 +186,27 @@ export const scienceHero: Hero = {
   },
 };
 
+export const PictureTransformations: PictureTransformation[] = [
+  {
+    id: "0",
+    title: "See the difference",
+    points: [
+      "Point 1",
+      "Point 2",
+      "Point 3",
+    ],
+    firstimage: {
+      url: logoBlack,
+      alt: "before",
+    },
+    secondimage: {
+      url: logoWhite,
+      alt: "after",
+    },
+  },
+];
+
 export const scienceContent = {
   hero: scienceHero,
+  pictureTransformations: PictureTransformations,
 };

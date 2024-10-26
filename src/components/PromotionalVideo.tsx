@@ -50,10 +50,10 @@ const PromotionalVideo: React.FC<PromotionalVideoProps> = ({ promotionalVideoPay
         </p>
         <div className="flex flex-col space-y-6 h5 text-gray-50">
           { pv.primaryCta &&
-            <CallToAction title={pv.primaryCta.title} url={pv.primaryCta.title} className='bg-gradient-to-br from-green-700 to-green-500 w-80'/>
+            <CallToAction title={pv.primaryCta.title} url={pv.primaryCta.url} className='bg-gradient-to-br from-green-700 to-green-500 w-80'/>
           }
           { pv.secondaryCta &&
-            <CallToAction title={pv.secondaryCta.title} url={pv.secondaryCta.title} className='bg-gradient-to-r from-n-8 to-n-6 w-80'/>
+            <CallToAction title={pv.secondaryCta.title} url={pv.secondaryCta.url} className='bg-gradient-to-r from-n-8 to-n-6 w-80'/>
           }
         </div>
       </div>
