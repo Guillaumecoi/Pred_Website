@@ -1,5 +1,6 @@
 // General types
 export type Image = {
+  id?: string;
   url: string;
   alt: string;
 };
@@ -77,6 +78,16 @@ export interface TeamContent {
 }
 
 // Science page content
+export interface PictureTransformation {
+  id?: string;
+  title: string;
+  description?: string;
+  points?: string[];
+  firstimage: Image;
+  secondimage: Image;
+}
+
 export interface ScienceContent {
   hero: Hero;
+  pictureTransformations: PictureTransformation[];
 }
