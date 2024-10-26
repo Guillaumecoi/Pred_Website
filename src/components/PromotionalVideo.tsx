@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
-import { FaCheck } from "react-icons/fa";
 import { PromotionalVideo as PV } from '../constants/types';
 import CallToAction from './general/CallToAction';
+import Checkpoint from './general/CheckPoint';
 
 interface PromotionalVideoProps {
   promotionalVideoPayload: PV;
@@ -45,10 +45,7 @@ const PromotionalVideo: React.FC<PromotionalVideoProps> = ({ promotionalVideoPay
         <h2 className="h2 mb-4">{pv.title}</h2>
         <p className="text-xl text-justify pb-12">
           {pv.checks.map((check, index) => (
-            <span key={index} className="flex items-center mb-2">
-              <FaCheck className="mr-2" /> 
-              {check}
-            </span>
+            <Checkpoint check={check} key={index.toString()} />
           ))}
         </p>
         <div className="flex flex-col space-y-6 h5 text-gray-50">
