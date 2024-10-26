@@ -1,6 +1,8 @@
-import FeatureHighlights from "../components/FeatureHighlight";
 import Header from "../components/header/Header";
-import Hero from "../components/Hero";
+import Hero from "../components/general/Hero";
+import PromotionalVideo from "../components/PromotionalVideo";
+import SocialProof from "../components/SocialProof";
+import Footer from "../components/Footer";
 import { homecontent } from "../constants";
 
 function Home() {
@@ -8,8 +10,12 @@ function Home() {
     <>
       <Header />
       <Hero hero={homecontent.hero} />
-      <FeatureHighlights content={homecontent.validationHighlight} />
+      <div className="h-screen overflow-y-auto my-auto" >
+        <PromotionalVideo promotionalVideoPayload={homecontent.promotionalVideo} />
+        <SocialProof content={homecontent.socialProof} title="Partner Organisations" />
+      </div>
 
+      <Footer />
     </>
   );
 }

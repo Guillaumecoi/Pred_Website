@@ -8,4 +8,4 @@ const content: Content = process.env.USE_REAL_CONTENT === 'true' ? realContent :
 export const homecontent: HomeContent = process.env.USE_REAL_CONTENT === 'true' ? realHomecontent : dummyHomecontent;
 export const teamContent: TeamContent = process.env.USE_REAL_CONTENT === 'true' ? realTeamContent : dummyTeamContent;
 
-export const { navigation, logo: navbarlogo } = content;
+export const { navigation, logo: navbarlogo, footer } = content;

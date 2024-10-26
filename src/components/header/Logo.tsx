@@ -1,7 +1,7 @@
 import { navbarlogo } from "../../constants";
 
 const Logo = () => (
-  <a className="block xl:mr-8 py-2" href="#home">
+  <a className="block xl:mr-8 py-2" href="/">
     <img src={navbarlogo.url} width={45} alt={navbarlogo.alt} />
   </a>
 );

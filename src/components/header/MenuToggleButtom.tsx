@@ -1,6 +1,6 @@
 import { FiMenu } from "react-icons/fi";
 import { RiCloseFill } from "react-icons/ri";
-import Button from "../Button";
+import Button from "../general/Button";
 
 interface ToggleButtonProps {
   openNavigation: boolean;

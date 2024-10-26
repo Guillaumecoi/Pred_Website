@@ -1,5 +1,5 @@
 import React from "react";
-import { FeatureHighlightSection } from "../constants/types";
+import { FeatureHighlightSection } from "../../constants/types";
 import CallToAction from "./CallToAction";
 
 interface FeatureHighlightsProps {
