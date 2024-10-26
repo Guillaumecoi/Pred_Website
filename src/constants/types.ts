@@ -75,3 +75,8 @@ export interface TeamContent {
   hero: Hero;
   members: TeamMember[];
 }
+
+// Science page content
+export interface ScienceContent {
+  hero: Hero;
+}

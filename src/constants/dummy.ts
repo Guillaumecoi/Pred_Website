@@ -5,7 +5,7 @@
  */
 
 import { NavigationItem, Hero, Content, HomeContent, Image } from "./types";
-import { mountainLake, officeTeam } from "../assets/backgrounds";
+import { hospital, mountainLake, officeTeam } from "../assets/backgrounds";
 import { logoWhite, google, apple, microsoft } from "../assets/dummy/logo";
 import { AliceJohnson, BobSmith, CharlieBrown } from "../assets/dummy/team";
 import { Video } from "../assets/dummy/video";
@@ -174,4 +174,18 @@ const teamMembers = [
 export const teamContent = {
   hero: heroTeam,
   members: teamMembers,
+};
+
+// SciencePages
+export const scienceHero: Hero = {
+  small: true,
+  title: "Our Therapy",
+  image: {
+    url: hospital,
+    alt: "hero therapy",
+  },
+};
+
+export const scienceContent = {
+  hero: scienceHero,
 };
