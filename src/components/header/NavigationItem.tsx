@@ -1,11 +1,8 @@
 import React from 'react';
+import { Page } from '../../constants/types';
 
 interface NavigationItemProps {
-  item: {
-    id: string;
-    url: string;
-    title: string;
-  };
+  item: Page;
   pathname: string;
 }
 
