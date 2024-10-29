@@ -1,7 +1,7 @@
 import { PictureTransformation as PT } from "../../constants/types";
 import BeforeAfterSlider from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
-import Checkpoint from "./CheckPoint";
+import Checkpoints from "./CheckPoints";
 
 interface PictureTransformationProps {
   pictureTransformation: PT;
@@ -13,9 +13,7 @@ const PictureTransformation: React.FC<PictureTransformationProps> = ({ pictureTr
       <div className="lg:col-span-3 p-5">
         <h1 className="h1 py-8">{pictureTransformation.title}</h1>
         <p className="text-xl text-justify pb-12">
-          {pictureTransformation.points?.map((check, index) => (
-            <Checkpoint check={check} key={index.toString()} />
-          ))}
+          {pictureTransformation.points && <Checkpoints checks={pictureTransformation.points} />}
         </p>
         {pictureTransformation.description && <p className="mt-2">{pictureTransformation.description}</p>}
       </div>
