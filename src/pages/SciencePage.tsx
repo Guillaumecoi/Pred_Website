@@ -1,5 +1,4 @@
-import Header from "../components/header/Header"
-import Footer from "../components/Footer"
+import Page from "../components/Page";
 import Hero from "../components/general/Hero";
 
 import { scienceContent } from "../constants";
@@ -8,14 +7,12 @@ import { PictureTransformation as PT } from "../constants/types";
 
 function SciencePage() {
   return (
-    <div>
-      <Header />
+    <Page>
       <Hero hero={scienceContent.hero}/>
       {scienceContent.pictureTransformations?.map((pictureTransformation: PT) => (
         <PictureTransformation key={pictureTransformation.id} pictureTransformation={pictureTransformation}/>
       ))}
-      <Footer />
-    </div>
+    </Page>
   );
 }
 
