@@ -4,11 +4,8 @@ import PromotionalVideo from "../components/PromotionalVideo";
 import SocialProof from "../components/SocialProof";
 import { HomeContent } from "../constants/types";
 
-interface HomeProps {
-  content: HomeContent;
-}
 
-const Home: React.FC<HomeProps> = ({ content }) => {
+const Home: React.FC<{content: HomeContent}> = ({ content }) => {
   return (
     <Page>
       <Hero hero={content.hero} />

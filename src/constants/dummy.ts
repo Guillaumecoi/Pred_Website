@@ -4,22 +4,15 @@
  * Replace this content with actual content when integrating the website.
  */
 
-import { Page, Hero, Content, HomeContent, PictureTransformation, NavbarContent } from "./types";
-import { homePage, aboutPage, contactPage, teamPage, sciencePage } from "./dummy/dummypages";
-import { hospital, mountainLake, officeTeam } from "../assets/backgrounds";
-import { logoWhite, google, apple, microsoft, logoBlack } from "../assets/dummy/logo";
+import { Page, Hero, Content, PictureTransformation, NavbarContent } from "./types";
+import { pages as importPages, homePage, aboutPage, contactPage, teamPage } from "./dummy/dummypages";
+import { hospital, officeTeam } from "../assets/backgrounds";
+import { logoWhite, logoBlack } from "../assets/dummy/logo";
 import { AliceJohnson, BobSmith, CharlieBrown } from "../assets/dummy/team";
-import { Video } from "../assets/dummy/video";
 
 
 // Pages
-export const pages: Page[] = [
-  homePage,
-  aboutPage,
-  teamPage,
-  contactPage,
-  sciencePage,
-];
+export const pages: Page[] = importPages;
 
 // Navbar
 const navbarContent: NavbarContent = {
@@ -54,79 +47,6 @@ const footerContent = {
 export const content: Content = {
   navbar: navbarContent,
   footer: footerContent,
-};
-
-// Homescreen
-const hero: Hero = {
-  small: false,
-  title: "Homescreen Title",
-  subtitle: "Homescreen Subtitle",
-  image: {
-    url: mountainLake,
-    alt: "hero home",
-  },
-  primaryCta: {
-    title: "Promo Video",
-    url: "#promo-video",
-  },
-  secondaryCta: {
-    title: "Secondary CTA",
-    url: "",
-  },
-};
-
-const socialProof = [
-  {
-    id: "google",
-    image: {
-      url: google,
-      alt: "Google logo",
-    },
-    name: "Google",
-    quote: "Our collaboration with Google ensures that our website is always last—because they save the best for last, right?",
-    url: "https://www.google.com/",
-  },
-  {
-    id: "microsoft",
-    image: {
-      url: microsoft,
-      alt: "Microsoft logo",
-    },
-    name: "Microsoft",
-    quote: "We earned a certificate from Microsoft for ‘Innovative Error Generation.’",
-    url: "https://www.microsoft.com/",
-  },
-  {
-    id: "apple",
-    image: {
-      url: apple,
-      alt: "Apple logo",
-    },
-    name: "Apple",
-    quote: "Apple declared us ‘revolutionary’, in causing people to go back to pen and paper.",
-    url: "https://www.apple.com/",
-  },
-];
-
-const promotionalVideo = {
-  videoUrl: Video,
-  alt: "Promotional video",
-  title: "Promotional Video",
-  checks: [
-    "Created by experts tired of effortless solutions",
-    "Lost? That’s part of the fun!",
-    "More memorable than manageable!",
-  ],
-  primaryCta: {
-    title: "Discover the magic",
-    url: "",
-  },
-};
-
-export const homeContent: HomeContent = {
-  hero: hero,
-  socialProof: socialProof,
-  promotionalVideo: promotionalVideo,
 };
 
 // Our Team
