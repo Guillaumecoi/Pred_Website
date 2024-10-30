@@ -1,12 +1,13 @@
 import { useLocation } from "react-router-dom";
-import { navigation } from "../../constants";
 import NavigationItems from "./NavigationItems";
+import { NavbarItem } from "../../constants/types";
 
 interface MobileNavigationProps {
   openNavigation: boolean;
+  navigation: NavbarItem[];
 }
 
-const MobileNavigation = ({ openNavigation}: MobileNavigationProps) => {
+const MobileNavigation: React.FC<MobileNavigationProps> = ({ openNavigation, navigation }) => {
   const pathname = useLocation().pathname;
 
   return (
@@ -18,7 +19,7 @@ const MobileNavigation = ({ openNavigation}: MobileNavigationProps) => {
   );
 };
 
-const DesktopNavigation = () => {
+const DesktopNavigation: React.FC<{ navigation: NavbarItem[] }> = ({ navigation }) => {
   const pathname = useLocation().pathname;
 
   return (

@@ -5,7 +5,11 @@ function App() {
   return (
     <Routes>
       {pages.map((page, index) => (
-        <Route key={index} path={page.url} element={<page.component />} />
+        <Route
+          key={index}
+          path={page.url}
+          element={<page.component {...page.props} />}
+        />
       ))}
     </Routes>
   );

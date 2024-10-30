@@ -4,7 +4,7 @@
  * Replace this content with actual content when integrating the website.
  */
 
-import { Page, Hero, Content, HomeContent, Image, PictureTransformation } from "./types";
+import { Page, Hero, Content, HomeContent, PictureTransformation, NavbarContent } from "./types";
 import { homePage, aboutPage, contactPage, teamPage, sciencePage } from "./dummy/dummypages";
 import { hospital, mountainLake, officeTeam } from "../assets/backgrounds";
 import { logoWhite, google, apple, microsoft, logoBlack } from "../assets/dummy/logo";
@@ -22,16 +22,29 @@ export const pages: Page[] = [
 ];
 
 // Navbar
-const navigation: Page[] = [
-  homePage,
-  aboutPage,
-  teamPage,
-  contactPage,
-];
-
-const navbarlogo: Image = {
-  url: logoWhite,
-  alt: "navbar logo",
+const navbarContent: NavbarContent = {
+  navigation: [
+    {
+      title: "Home",
+      url: homePage.url,
+    },
+    {
+      title: "About",
+      url: aboutPage.url,
+    },
+    {
+      title: "Our Team",
+      url: teamPage.url,
+    },
+    {
+      title: "Contact Us",
+      url: contactPage.url,
+    },
+  ],
+  logo: {
+    url: logoWhite,
+    alt: "navbar logo",
+  },
 };
 
 const footerContent = {
@@ -39,8 +52,7 @@ const footerContent = {
 };
 
 export const content: Content = {
-  navigation: navigation,
-  logo: navbarlogo,
+  navbar: navbarContent,
   footer: footerContent,
 };
 

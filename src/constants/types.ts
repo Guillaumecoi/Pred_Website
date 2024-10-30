@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // General types
-export type Page = {
-  title: string;
+export interface Page {
   url: string;
-  component: React.ComponentType;
-};
+  component: React.ComponentType<any>;
+  props?: any;
+}
 
 export type Image = {
   id?: string;
@@ -32,9 +33,18 @@ export type FooterContent = {
   email?: string;
 };
 
-export interface Content {
-  navigation: Page[];
+export interface  NavbarItem {
+  title: string;
+  url: string;
+}
+
+export interface NavbarContent {
+  navigation: NavbarItem[];
   logo: Image;
+} 
+
+export interface Content {
+  navbar: NavbarContent;
   footer: FooterContent;
 }
 
@@ -63,7 +73,6 @@ export interface HomeContent {
 
 // Team content
 export interface TeamMember {
-  id: string;
   name: string;
   role: string;
   image: Image;

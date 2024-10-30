@@ -1,8 +1,8 @@
 import React from 'react';
-import { Page } from '../../constants/types';
+import { NavbarItem } from '../../constants/types';
 
 interface NavigationItemProps {
-  items: Page[];
+  items: NavbarItem[];
   pathname: string;
 }
 

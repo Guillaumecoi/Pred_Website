@@ -2,15 +2,19 @@ import Page from "../components/Page";
 import Hero from "../components/general/Hero";
 import PromotionalVideo from "../components/PromotionalVideo";
 import SocialProof from "../components/SocialProof";
-import { homecontent } from "../constants";
+import { HomeContent } from "../constants/types";
 
-function Home() {
+interface HomeProps {
+  content: HomeContent;
+}
+
+const Home: React.FC<HomeProps> = ({ content }) => {
   return (
     <Page>
-      <Hero hero={homecontent.hero} />
+      <Hero hero={content.hero} />
       <div className="h-screen overflow-y-auto my-auto" >
-        <PromotionalVideo promotionalVideoPayload={homecontent.promotionalVideo} />
-        <SocialProof content={homecontent.socialProof} title="Partner Organisations" />
+        <PromotionalVideo promotionalVideoPayload={content.promotionalVideo} />
+        <SocialProof content={content.socialProof} title="Partner Organisations" />
       </div>
     </Page>
   );
