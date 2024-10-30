@@ -1,4 +1,10 @@
 // General types
+export type Page = {
+  title: string;
+  url: string;
+  component: React.ComponentType;
+};
+
 export type Image = {
   id?: string;
   url: string;
@@ -20,12 +26,6 @@ export type Hero = {
 };
 
 // Main content types
-export type NavigationItem = {
-  id: string;
-  title: string;
-  url: string;
-};
-
 export type FooterContent = {
   company: string;
   designer?: string;
@@ -33,14 +33,14 @@ export type FooterContent = {
 };
 
 export interface Content {
-  navigation: NavigationItem[];
+  navigation: Page[];
   logo: Image;
   footer: FooterContent;
 }
 
 // Home content
 export interface SocialProof {
-  id: string;
+  id?: string;
   image: Image;
   name: string;
   quote: string;

@@ -4,34 +4,29 @@
  * Replace this content with actual content when integrating the website.
  */
 
-import { NavigationItem, Hero, Content, HomeContent, Image, PictureTransformation } from "./types";
+import { Page, Hero, Content, HomeContent, Image, PictureTransformation } from "./types";
+import { homePage, aboutPage, contactPage, teamPage, sciencePage } from "./dummy/dummypages";
 import { hospital, mountainLake, officeTeam } from "../assets/backgrounds";
 import { logoWhite, google, apple, microsoft, logoBlack } from "../assets/dummy/logo";
 import { AliceJohnson, BobSmith, CharlieBrown } from "../assets/dummy/team";
 import { Video } from "../assets/dummy/video";
 
+
+// Pages
+export const pages: Page[] = [
+  homePage,
+  aboutPage,
+  teamPage,
+  contactPage,
+  sciencePage,
+];
+
 // Navbar
-const navigation: NavigationItem[] = [
-  {
-    id: "0",
-    title: "Home",
-    url: "/",
-  },
-  {
-    id: "1",
-    title: "Our Company",
-    url: "#our-company",
-  },
-  {
-    id: "2",
-    title: "About Us",
-    url: "/our-team",
-  },
-  {
-    id: "3",
-    title: "Contact Us",
-    url: "#contact-us",
-  },
+const navigation: Page[] = [
+  homePage,
+  aboutPage,
+  teamPage,
+  contactPage,
 ];
 
 const navbarlogo: Image = {
@@ -59,18 +54,18 @@ const hero: Hero = {
     alt: "hero home",
   },
   primaryCta: {
-    title: "Primary CTA",
-    url: "#primary-cta",
+    title: "Promo Video",
+    url: "#promo-video",
   },
   secondaryCta: {
     title: "Secondary CTA",
-    url: "#secondary-cta",
+    url: "",
   },
 };
 
 const socialProof = [
   {
-    id: "0",
+    id: "google",
     image: {
       url: google,
       alt: "Google logo",
@@ -80,7 +75,7 @@ const socialProof = [
     url: "https://www.google.com/",
   },
   {
-    id: "1",
+    id: "microsoft",
     image: {
       url: microsoft,
       alt: "Microsoft logo",
@@ -90,7 +85,7 @@ const socialProof = [
     url: "https://www.microsoft.com/",
   },
   {
-    id: "2",
+    id: "apple",
     image: {
       url: apple,
       alt: "Apple logo",
@@ -112,7 +107,7 @@ const promotionalVideo = {
   ],
   primaryCta: {
     title: "Discover the magic",
-    url: "#learn-more",
+    url: "",
   },
 };
 
@@ -134,7 +129,6 @@ const heroTeam: Hero = {
 
 const teamMembers = [
   {
-    id: "0",
     name: "Alice Johnson",
     role: "Software Engineer",
     image: {
@@ -143,10 +137,9 @@ const teamMembers = [
     },
     description: "Alice Johnson is a skilled software engineer with a passion for developing innovative solutions. She has a strong background in full-stack development.",
     email: "alice.johnson@example.com",
-    profileUrl: "/our-team/0",
+    profileUrl: teamPage.url + "/Alice_Johnson",
   },
   {
-    id: "1",
     name: "Bob Smith",
     role: "Product Manager",
     image: {
@@ -155,10 +148,9 @@ const teamMembers = [
     },
     description: "Bob Smith is an experienced product manager who excels at leading cross-functional teams to deliver high-quality products on time.",
     email: "bob.smith@example.com",
-    profileUrl: "/our-team/1",
+    profileUrl: teamPage.url + "/Bob_Smith",
   },
   {
-    id: "2",
     name: "Charlie Brown",
     role: "UX Designer",
     image: {
@@ -167,7 +159,7 @@ const teamMembers = [
     },
     description: "Charlie Brown is a creative UX designer with a keen eye for detail. He is dedicated to creating user-friendly interfaces and enhancing user experiences.",
     email: "charlie.brown@example.com",
-    profileUrl: "/our-team/2",
+    profileUrl: teamPage.url + "/Charlie_Brown",
   },
 ];
 

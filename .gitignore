@@ -26,7 +26,7 @@ tsconfig.app.tsbuildinfo
 
 # So that the content of the website is not exposed
 src/constants/content.ts
-src/assets/private
+private
 
 # Environment variables
 .env
