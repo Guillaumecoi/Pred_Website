@@ -1,8 +1,8 @@
 import About from "../../pages/About";
 import Home from "../../pages/Home";
-import Team from "../../pages/Team";
 import homepage from "./homecontent";
 import { Page } from "../types";
+import teampage from "./teamcontent";
 
 
 export const homePage: Page = homepage;
@@ -12,10 +12,7 @@ export const aboutPage: Page = {
   component: About,
 };
 
-export const teamPage: Page = {
-  url: "/our-team",
-  component: Team,
-};
+export const teamPage: Page = teampage;
 
 export const contactPage: Page = {
   url: "/contact-us",
