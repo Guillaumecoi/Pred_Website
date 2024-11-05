@@ -4,12 +4,12 @@ import {
     pages as realPages,
     content as realContent,
     scienceContent as realScienceContent
-} from './content';
+} from './private/content';
 import { 
     pages as dummyPages,
     content as dummyContent,
     scienceContent as dummyScienceContent
-} from './dummy';
+} from './dummy/content';
 
 const content: Content = process.env.USE_REAL_CONTENT === 'true' ? realContent : dummyContent;
 

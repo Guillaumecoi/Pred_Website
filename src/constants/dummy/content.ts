@@ -4,10 +4,10 @@
  * Replace this content with actual content when integrating the website.
  */
 
-import { Page, Hero, Content, PictureTransformation, NavbarContent } from "./types";
-import { pages as importPages, homePage, aboutPage, contactPage, teamPage } from "./dummy/dummypages";
-import { hospital } from "../assets/backgrounds";
-import { logoWhite, logoBlack } from "../assets/dummy/logo";
+import { Page, Hero, Content, PictureTransformation, NavbarContent } from "../types";
+import { pages as importPages, homePage, aboutPage, contactPage, teamPage } from "./pages";
+import { hospital } from "../../assets/backgrounds";
+import { logoWhite, logoBlack } from "../../assets/dummy/logo";
 
 
 // Pages

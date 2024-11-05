@@ -2,7 +2,7 @@ import { Hero, HomeContent, Page } from "../types";
 import { mountainLake } from "../../assets/backgrounds";
 import { google, apple, microsoft} from "../../assets/dummy/logo";
 import { Video } from "../../assets/dummy/video";
-import ROUTES from "../routes"
+import ROUTES from "./routes"
 import Home from "../../pages/Home";
 
 // Homescreen

@@ -1,7 +1,7 @@
 import { Hero, Page } from "./../types";
 import { officeTeam } from "../../assets/backgrounds";
 import { AliceJohnson, BobSmith, CharlieBrown } from "../../assets/dummy/team";
-import ROUTES from "../routes";
+import ROUTES from "./routes";
 import Team from "../../pages/Team";
 
 // Our Team
