@@ -4,10 +4,9 @@
  * Replace this content with actual content when integrating the website.
  */
 
-import { Page, Hero, Content, PictureTransformation, NavbarContent } from "../types";
+import { Page, Content, NavbarContent } from "../types";
 import { pages as importPages, homePage, aboutPage, contactPage, teamPage } from "./pages";
-import { hospital } from "../../assets/backgrounds";
-import { logoWhite, logoBlack } from "../../assets/dummy/logo";
+import { logoWhite } from "../../assets/dummy/logo";
 
 
 // Pages
@@ -46,40 +45,4 @@ const footerContent = {
 export const content: Content = {
   navbar: navbarContent,
   footer: footerContent,
-};
-
-
-// SciencePages
-export const scienceHero: Hero = {
-  small: true,
-  title: "Our Therapy",
-  image: {
-    url: hospital,
-    alt: "hero therapy",
-  },
-};
-
-export const PictureTransformations: PictureTransformation[] = [
-  {
-    id: "0",
-    title: "See the difference",
-    points: [
-      "Point 1",
-      "Point 2",
-      "Point 3",
-    ],
-    firstimage: {
-      url: logoBlack,
-      alt: "before",
-    },
-    secondimage: {
-      url: logoWhite,
-      alt: "after",
-    },
-  },
-];
-
-export const scienceContent = {
-  hero: scienceHero,
-  pictureTransformations: PictureTransformations,
 };

@@ -1,8 +1,8 @@
 import About from "../../pages/About";
-import Home from "../../pages/Home";
-import homepage from "./homecontent";
 import { Page } from "../types";
+import homepage from "./homecontent";
 import teampage from "./teamcontent";
+import sciencepage from "./sciencecontent";
 import ROUTES from "./routes";
 
 
@@ -17,13 +17,10 @@ export const teamPage: Page = teampage;
 
 export const contactPage: Page = {
   url: ROUTES.contact,
-  component: Home,
+  component: About,
 };
 
-export const sciencePage: Page = {
-  url: ROUTES.science,
-  component: Home,
-};
+export const sciencePage: Page = sciencepage;
 
 export const pages: Page[] = [
   homePage,

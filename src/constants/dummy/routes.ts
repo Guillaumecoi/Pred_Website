@@ -4,7 +4,6 @@ export const ROUTES = {
   team: "/our-team",
   contact: "/contact-us",
   science: "/science",
-  lllt: "/science/lllt",
 };
 
 export default ROUTES;
