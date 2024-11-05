@@ -43,9 +43,9 @@ const PromotionalVideo: React.FC<PromotionalVideoProps> = ({ promotionalVideoPay
     <div className="flex flex-col items-center justify-center space-y-6 lg:space-x-20 lg:flex-row py-20 px-8 lg:px-14 text-gray-800" id='promo-video'>
       <div className="w-full lg:w-1/3 mb-12 lg:mb-0 space-y-8">
         <h2 className="h2 mb-4">{pv.title}</h2>
-        <p className="text-xl pb-4 lg:pb-12">
+        <div className="text-xl pb-4 lg:pb-12">
           <Checkpoints checks={pv.checks} />
-        </p>
+        </div>
         <div className="flex flex-col space-y-6 h5 text-gray-50">
           { pv.primaryCta &&
             <CallToAction title={pv.primaryCta.title} url={pv.primaryCta.url} className='bg-gradient-to-br from-green-700 to-green-500 w-80'/>
