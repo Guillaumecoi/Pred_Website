@@ -12,9 +12,9 @@ const PictureTransformation: React.FC<PictureTransformationProps> = ({ pictureTr
     <div className="container py-14 grid lg:grid-cols-5 gap-4">
       <div className="lg:col-span-3 p-5">
         <h1 className="h1 py-8">{pictureTransformation.title}</h1>
-        <p className="text-xl text-justify pb-12">
+        <div className="text-xl text-justify pb-12">
           {pictureTransformation.points && <Checkpoints checks={pictureTransformation.points} />}
-        </p>
+        </div>
         {pictureTransformation.description && <p className="mt-2">{pictureTransformation.description}</p>}
       </div>
       <div className="lg:col-span-2">

@@ -7,7 +7,7 @@ interface TeamMemberProps {
 
 const TeamMember: React.FC<TeamMemberProps> = ({ teammember }) => {
   return (
-    <div className="w-full md:w-3/10 items-center space-y-4 px-6 text-center" id={teammember.id}>
+    <div className="w-full md:w-3/10 items-center space-y-4 px-6 text-center" id={teammember.name}>
       <a href={teammember.profileUrl} className="block transition-transform hover:scale-110 hover:pb-8">
         <div className={`w-64 h-80 overflow-hidden rounded-full mb-4 mx-auto shadow-2xl hover:shadow-black`}>
           <img src={teammember.image.url} alt={teammember.image.alt} className="w-full h-full object-cover" />
