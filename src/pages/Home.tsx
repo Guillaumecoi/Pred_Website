@@ -1,22 +1,19 @@
-import Header from "../components/header/Header";
+import Page from "../components/Page";
 import Hero from "../components/general/Hero";
 import PromotionalVideo from "../components/PromotionalVideo";
 import SocialProof from "../components/SocialProof";
-import Footer from "../components/Footer";
-import { homecontent } from "../constants";
+import { HomeContent } from "../constants/pageTypes";
 
-function Home() {
+
+const Home: React.FC<{content: HomeContent}> = ({ content }) => {
   return (
-    <>
-      <Header />
-      <Hero hero={homecontent.hero} />
-      <div className="h-screen overflow-y-auto my-auto" >
-        <PromotionalVideo promotionalVideoPayload={homecontent.promotionalVideo} />
-        <SocialProof content={homecontent.socialProof} title="Partner Organisations" />
+    <Page>
+      <Hero hero={content.hero} />
+      <div>
+        <PromotionalVideo promotionalVideoPayload={content.promotionalVideo} />
+        <SocialProof content={content.socialProof} title="Partner Organisations" />
       </div>
-
-      <Footer />
-    </>
+    </Page>
   );
 }
 

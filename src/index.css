@@ -86,3 +86,33 @@
 .-rotate-360 {
   @apply rotate-[-360deg];
 }
+
+.slider-container {
+  position: relative; /* Ensure proper positioning */
+  overflow: hidden; /* Prevent overflow */
+  width: 400px; /* Desired width */
+  height: 300px; /* Desired height */
+}
+
+.custom-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.before-after-slider {
+  width: 100%;
+  position: relative;
+}
+
+.before-after-slider__first-photo-container,
+.before-after-slider__second-photo-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.before-after-slider__second-photo-container {
+  top: 0;
+  position: absolute;
+}

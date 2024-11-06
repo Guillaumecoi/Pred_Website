@@ -1,14 +1,16 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Team from './pages/Team';
+import { pages } from './constants';
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path='/our-team' element={<Team />} />
+      {pages.map((page, index) => (
+        <Route
+          key={index}
+          path={page.url}
+          element={<page.component {...page.props} />}
+        />
+      ))}
     </Routes>
   );
 }

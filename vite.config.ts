@@ -9,5 +9,15 @@ export default defineConfig({
   plugins: [react()],
   define: {
     'process.env.USE_REAL_CONTENT': JSON.stringify(process.env.USE_REAL_CONTENT)
+  },
+  build: {
+    assetsDir: 'assets', // Specify the folder for assets
+    rollupOptions: {
+      output: {
+        entryFileNames: '[name].js',
+        chunkFileNames: '[name].js',
+        assetFileNames: 'assets/[name][extname]' // Place assets in the 'assets' folder
+      }
+    }
   }
 });

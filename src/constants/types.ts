@@ -1,84 +1,74 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // General types
-export type Image = {
+export interface Page {
+  url: string;
+  component: React.ComponentType<any>;
+  props?: any;
+}
+
+export interface Image {
+  id?: string;
   url: string;
   alt: string;
 };
 
-export type CallToActionItem = {
+export interface CallToActionItem {
   title: string;
   url: string;
 };
 
-export type Hero = {
+export interface Hero {
+  small: boolean;
   title: string;
-  subtitle: string;
+  subtitle?: string;
   image: Image;
-  primaryCta: CallToActionItem;
-  secondaryCta: CallToActionItem;
+  primaryCta?: CallToActionItem;
+  secondaryCta?: CallToActionItem;
 };
 
-// Main types
-export type NavigationItem = {
-  id: string;
+export interface Link {
   title: string;
   url: string;
 };
 
-export type FooterContent = {
-  company: string;
-  designer: string;
-  email: string;
+export interface Introduction {
+  title: string;
+  paragraph: string;
+  links: Link[];
+  image: Image;
 };
 
-export interface Content {
-  navigation: NavigationItem[];
-  logo: Image;
-  footer: FooterContent;
+export interface PictureTransformation {
+  id?: string;
+  title: string;
+  description?: string;
+  points?: string[];
+  firstimage: Image;
+  secondimage: Image;
+  credits?: string;
 }
 
-// Home content
-export interface FeatureItem {
-  id: string;
+export interface  NavbarItem {
   title: string;
-  subtitle: string;
-  description: string;
-  image: Image;
-  cta: CallToActionItem;
-}
-
-export interface FeatureHighlightSection {
-  title: string;
-  image: Image;
-  items: FeatureItem[];
-  ctas: CallToActionItem[];
+  url: string;
 }
 
 export interface SocialProof {
-  id: string;
+  id?: string;
   image: Image;
   name: string;
   quote: string;
   url: string;
 }
 export interface PromotionalVideo {
-  url: string;
+  videoUrl: string;
   alt: string;
   title: string;
   checks: string[];
-  primaryCta: CallToActionItem;
-  secondaryCta: CallToActionItem;
+  primaryCta?: CallToActionItem;
+  secondaryCta?: CallToActionItem;
 }
-
-export interface HomeContent {
-  hero: Hero;
-  validationHighlight: FeatureHighlightSection;
-  socialProof: SocialProof[];
-  promotionalVideo: PromotionalVideo;
-}
-
-// Team content
 export interface TeamMember {
-  id: string;
   name: string;
   role: string;
   image: Image;
@@ -87,14 +77,19 @@ export interface TeamMember {
   profileUrl: string;
 }
 
-export interface Partner {
-  id: string;
-  name: string;
-  logo: Image;
-  url: string;
-}
+// Footer and Navbar types
+export interface FooterContent {
+  company: string;
+  designer?: string;
+  email?: string;
+};
 
-export interface TeamContent {
-  hero: Hero;
-  members: TeamMember[];
+export interface NavbarContent {
+  navigation: NavbarItem[];
+  logo: Image;
+} 
+
+export interface Content {
+  navbar: NavbarContent;
+  footer: FooterContent;
 }
