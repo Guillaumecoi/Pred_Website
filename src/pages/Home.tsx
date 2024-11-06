@@ -9,7 +9,7 @@ const Home: React.FC<{content: HomeContent}> = ({ content }) => {
   return (
     <Page>
       <Hero hero={content.hero} />
-      <div className="h-screen overflow-y-auto my-auto" >
+      <div>
         <PromotionalVideo promotionalVideoPayload={content.promotionalVideo} />
         <SocialProof content={content.socialProof} title="Partner Organisations" />
       </div>
