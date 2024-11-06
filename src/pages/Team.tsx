@@ -1,7 +1,7 @@
 import Page from "../components/Page";
 import Hero from "../components/general/Hero";
 import TeamMember from "../components/TeamMember";
-import { TeamContent } from "../constants/types";
+import { TeamContent } from "../constants/pageTypes";
 
 const Team: React.FC<{content: TeamContent}> = ({ content }) => {
   return (

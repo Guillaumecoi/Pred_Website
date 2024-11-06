@@ -6,18 +6,18 @@ export interface Page {
   props?: any;
 }
 
-export type Image = {
+export interface Image {
   id?: string;
   url: string;
   alt: string;
 };
 
-export type CallToActionItem = {
+export interface CallToActionItem {
   title: string;
   url: string;
 };
 
-export type Hero = {
+export interface Hero {
   small: boolean;
   title: string;
   subtitle?: string;
@@ -26,12 +26,12 @@ export type Hero = {
   secondaryCta?: CallToActionItem;
 };
 
-export type Link = {
+export interface Link {
   title: string;
   url: string;
 };
 
-export type Introduction = {
+export interface Introduction {
   title: string;
   paragraph: string;
   links: Link[];
@@ -48,29 +48,11 @@ export interface PictureTransformation {
   credits?: string;
 }
 
-// Main content types
-export type FooterContent = {
-  company: string;
-  designer?: string;
-  email?: string;
-};
-
 export interface  NavbarItem {
   title: string;
   url: string;
 }
 
-export interface NavbarContent {
-  navigation: NavbarItem[];
-  logo: Image;
-} 
-
-export interface Content {
-  navbar: NavbarContent;
-  footer: FooterContent;
-}
-
-// Home content
 export interface SocialProof {
   id?: string;
   image: Image;
@@ -86,14 +68,6 @@ export interface PromotionalVideo {
   primaryCta?: CallToActionItem;
   secondaryCta?: CallToActionItem;
 }
-
-export interface HomeContent {
-  hero: Hero;
-  socialProof: SocialProof[];
-  promotionalVideo: PromotionalVideo;
-}
-
-// Team content
 export interface TeamMember {
   name: string;
   role: string;
@@ -103,15 +77,19 @@ export interface TeamMember {
   profileUrl: string;
 }
 
-export interface TeamContent {
-  hero: Hero;
-  members: TeamMember[];
-}
+// Footer and Navbar types
+export interface FooterContent {
+  company: string;
+  designer?: string;
+  email?: string;
+};
 
-// Science page content
+export interface NavbarContent {
+  navigation: NavbarItem[];
+  logo: Image;
+} 
 
-export interface ScienceContent {
-  hero: Hero;
-  pictureTransformations: PictureTransformation[];
-  introduction?: Introduction;
+export interface Content {
+  navbar: NavbarContent;
+  footer: FooterContent;
 }
