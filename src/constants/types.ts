@@ -26,6 +26,28 @@ export type Hero = {
   secondaryCta?: CallToActionItem;
 };
 
+export type Link = {
+  title: string;
+  url: string;
+};
+
+export type Introduction = {
+  title: string;
+  paragraph: string;
+  links: Link[];
+  image: Image;
+};
+
+export interface PictureTransformation {
+  id?: string;
+  title: string;
+  description?: string;
+  points?: string[];
+  firstimage: Image;
+  secondimage: Image;
+  credits?: string;
+}
+
 // Main content types
 export type FooterContent = {
   company: string;
@@ -87,16 +109,9 @@ export interface TeamContent {
 }
 
 // Science page content
-export interface PictureTransformation {
-  id?: string;
-  title: string;
-  description?: string;
-  points?: string[];
-  firstimage: Image;
-  secondimage: Image;
-}
 
 export interface ScienceContent {
   hero: Hero;
   pictureTransformations: PictureTransformation[];
+  introduction?: Introduction;
 }

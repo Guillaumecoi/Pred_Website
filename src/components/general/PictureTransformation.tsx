@@ -9,20 +9,24 @@ interface PictureTransformationProps {
 
 const PictureTransformation: React.FC<PictureTransformationProps> = ({ pictureTransformation }) => {
   return (
-    <div className="container py-14 grid lg:grid-cols-5 gap-4">
-      <div className="lg:col-span-3 p-5">
-        <h1 className="h1 py-8">{pictureTransformation.title}</h1>
-        <div className="text-xl text-justify pb-12">
-          {pictureTransformation.points && <Checkpoints checks={pictureTransformation.points} />}
+    <div className="container py-14" id={pictureTransformation.id}>
+      <div className="bg-white rounded-2xl grid lg:grid-cols-5 lg:gap-4 py-8">
+        <div className="lg:col-span-3 px-12">
+          <h1 className="h2 mb-8">{pictureTransformation.title}</h1>
+          <div className="text-xl text-justify pb-8">
+            {pictureTransformation.points && <Checkpoints checks={pictureTransformation.points} />}
+          </div>
+          {pictureTransformation.description && <p className="mt-2 pb-10">{pictureTransformation.description}</p>}
         </div>
-        {pictureTransformation.description && <p className="mt-2">{pictureTransformation.description}</p>}
-      </div>
-      <div className="lg:col-span-2">
-        <BeforeAfterSlider
-          firstImage={{ imageUrl: pictureTransformation.firstimage.url, alt: pictureTransformation.firstimage.alt }}
-          secondImage={{ imageUrl: pictureTransformation.secondimage.url, alt: pictureTransformation.secondimage.alt }}
-          currentPercentPosition={40}
-        />
+        <div className="lg:col-span-2 px-12 lg:py-6">
+          <BeforeAfterSlider
+            firstImage={{ imageUrl: pictureTransformation.firstimage.url, alt: pictureTransformation.firstimage.alt }}
+            secondImage={{ imageUrl: pictureTransformation.secondimage.url, alt: pictureTransformation.secondimage.alt }}
+            currentPercentPosition={40}
+            withResizeFeel={false}
+          />
+          {pictureTransformation.credits && <p className="text-center text-sm mt-2">{pictureTransformation.credits}</p>}
+        </div>
       </div>
     </div>
   );
